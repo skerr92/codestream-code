@@ -111,20 +111,20 @@ void delete_tail(node* root) {
 class BTree {
 public:
     int data;
-    node *left;
-    node *right;
+    BTree *left;
+    BTree *right;
     BTree(int d) {
         data = d;
         left = right = NULL;
     }
 };
 
-void add_leaf(BTree root, BTree leaf) {
+void add_leaf(BTree *root, BTree *leaf) {
     if (root == NULL) root = leaf;
     if (leaf->data < root->data) {
         if (root->left != NULL) add_leaf(root->left, leaf);
         else root->left = leaf;
-    } else if (leaf->data > root-data) {
+    } else if (leaf->data > root->data) {
         if (root->right != NULL) add_leaf(root->right, leaf);
         else root->right = leaf;
     }
@@ -138,14 +138,19 @@ void inorder(BTree *root) {
 }
 
 int main() {
-    BTree root = new BTree(10);
-    BTree p = new BTree(7);
-    BTree r = new BTree(15);
+    BTree *root = new BTree(10);
+    BTree *p = new BTree(7);
+    BTree *r = new BTree(15);
 
     add_leaf(root, p);
     add_leaf(root, r);
+    add_leaf(root, new BTree(9));
+    add_leaf(root, new BTree(20));
+    add_leaf(root, new BTree(13));
 
     inorder(root);
+
+    cout << endl;
 
 
 };
