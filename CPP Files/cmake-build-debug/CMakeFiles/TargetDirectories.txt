@@ -1,0 +1,3 @@
+/Users/sethkerr/CLionProjects/280class-work/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/sethkerr/CLionProjects/280class-work/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/sethkerr/CLionProjects/280class-work/cmake-build-debug/CMakeFiles/280class_work.dir

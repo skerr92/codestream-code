@@ -22,8 +22,10 @@ int main() {
    * */
 
   cout << "hello world" << endl;
-
+  string inputvariable;
   cin >> inputvariable;
+
+  cout << inputvariable << endl;
 
   //Data types: Primatives which we covered first:
 
@@ -70,6 +72,8 @@ int main() {
     i++; //It's important to increment and reduce the size of your index value so you don't have an infinite loop.
     //You can also set the while loop to break which it reaches a specific argument like if a number in an array is less than 0.
   }
+
+  cout << endl;
 
 
   // Operators: Covered in the later part of the stream
